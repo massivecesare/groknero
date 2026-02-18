@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bubblebee Luxury B&B - Glamping di lusso con bolle trasparenti tra i campi di grano a Sant'Eusanio del Sangro. Vista Maiella.">
+    <title>Bubblebee Luxury B&B • Glamping di lusso in Abruzzo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap');
+        :root { --gold: #d4af37; }
+        .heading-font { font-family: 'Playfair Display', sans-serif; }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('images/tenuta-bubblebee.jpeg');
+            background-size: cover;
+            background-position: center 30%;
+        }
+        .nav-link:after { content:''; position:absolute; width:0; height:2px; bottom:-2px; left:0; background-color:var(--gold); transition:width .3s; }
+        .nav-link:hover:after, .active:after { width:100%; }
+        .active { color: #fcd34d !important; }
+        .teaser-card {
+            transition: all 0.4s ease;
+        }
+        .teaser-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgba(212,175,55,0.25);
+        }
+        .teaser-img {
+            height: 320px;
+            object-fit: cover;
+        }
+        @media (min-width: 1024px) {
+            .teaser-img { height: 380px; }
+        }
+    </style>
+</head>
+<body class="bg-stone-950 text-stone-200 font-sans">
+
+    <!-- NAVBAR (invariata) -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-stone-950/95 backdrop-blur-md border-b border-amber-900">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12 py-5 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="images/logo1.JPG" alt="Logo Bubblebee" class="h-11 lg:h-14 w-auto">
+                <div>
+                    <span class="heading-font text-3xl lg:text-4xl font-bold tracking-tighter">Bubblebee</span>
+                    <p class="text-xs lg:text-sm text-amber-400 -mt-1 tracking-[3px]">LUXURY B&amp;B</p>
+                </div>
+            </a>
+
+            <div class="hidden lg:flex items-center gap-10 text-base font-medium">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="tenuta.html" class="nav-link">La Tenuta</a>
+                <a href="stanze.html" class="nav-link">Le Bolle</a>
+                <a href="esperienze.html" class="nav-link">Esperienze</a>
+                <a href="galleria.html" class="nav-link">Galleria</a>
+                <a href="contatti.html" class="nav-link">Contatti</a>
+            </div>
+
+            <a href="contatti.html" class="hidden lg:flex items-center gap-3 bg-amber-500 hover:bg-amber-400 text-stone-950 font-semibold px-8 py-4 rounded-full transition-all text-sm">
+                <i class="fas fa-calendar"></i> PRENOTA ORA
+            </a>
+
+            <button id="mobile-btn" class="lg:hidden text-3xl text-amber-300"><i class="fas fa-bars"></i></button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-stone-950 border-t border-amber-900">
+            <div class="px-6 py-8 flex flex-col items-center gap-6 text-lg">
+                <a href="index.html" class="hover:text-amber-300">Home</a>
+                <a href="tenuta.html" class="hover:text-amber-300">La Tenuta</a>
+                <a href="stanze.html" class="hover:text-amber-300">Le Bolle</a>
+                <a href="esperienze.html" class="hover:text-amber-300">Esperienze</a>
+                <a href="galleria.html" class="hover:text-amber-300">Galleria</a>
+                <a href="contatti.html" class="hover:text-amber-300">Contatti</a>
+                <a href="contatti.html" class="mt-4 bg-amber-500 text-stone-950 px-8 py-4 rounded-full">Prenota ora</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO (invariata) -->
+    <section class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12 text-center">
+            <div class="max-w-5xl mx-auto">
+                <div class="inline-flex bg-white/10 backdrop-blur px-6 py-3 rounded-full mb-8 text-sm lg:text-base tracking-widest">SANT'EUSANIO DEL SANGRO • ABRUZZO</div>
+                <h1 class="heading-font text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold leading-tight text-white">LUSSO<br>SOTTO LE STELLE</h1>
+                <p class="mt-6 md:mt-10 text-lg md:text-2xl lg:text-3xl text-amber-100 max-w-4xl mx-auto">Bolle trasparenti di design immerse nei campi di grano dorato.<br class="hidden md:block">Vista mozzafiato sulla Maiella. Esperienza esclusiva a due passi dal mare.</p>
+
+                <div class="flex flex-col sm:flex-row gap-6 justify-center mt-12">
+                    <a href="stanze.html" class="px-10 py-6 bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-lg md:text-xl rounded-full transition-all">Scopri le Bolle</a>
+                    <a href="contatti.html" class="px-10 py-6 border-2 border-white hover:bg-white hover:text-stone-950 text-white font-medium text-lg md:text-xl rounded-full transition-all">Prenota la tua fuga</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEASER SEZIONI PRINCIPALI (invariata) -->
+    <section class="py-20 lg:py-32 bg-stone-900">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+            <h2 class="heading-font text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-16">Scopri Bubblebee</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+                <!-- Tenuta, Le Bolle, Esperienze, Galleria, Contatti – come prima -->
+                <div class="teaser-card bg-stone-800 rounded-3xl overflow-hidden shadow-xl">
+                    <img src="images/vista-tenuta.jpeg" alt="Campi di grano e Maiella" class="teaser-img w-full" loading="lazy">
+                    <div class="p-8 lg:p-10">
+                        <h3 class="heading-font text-3xl lg:text-4xl font-bold mb-4">La Tenuta</h3>
+                        <p class="text-stone-300 text-base lg:text-lg mb-6">10 ettari di natura incontaminata tra onde di grano dorato, uliveti secolari e panorama sulla Maiella innevata.</p>
+                        <a href="tenuta.html" class="inline-flex items-center gap-3 text-amber-400 hover:text-amber-300 font-medium text-lg">Scopri la tenuta <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="teaser-card bg-stone-800 rounded-3xl overflow-hidden shadow-xl">
+                    <img src="images/bubbleroom1.jpg" alt="Bolla trasparente di notte" class="teaser-img w-full" loading="lazy">
+                    <div class="p-8 lg:p-10">
+                        <h3 class="heading-font text-3xl lg:text-4xl font-bold mb-4">Le Bolle</h3>
+                        <p class="text-stone-300 text-base lg:text-lg mb-6">Suite trasparenti con jacuzzi privata, letto king size e vista 360° sulle stelle e sui campi.</p>
+                        <a href="stanze.html" class="inline-flex items-center gap-3 text-amber-400 hover:text-amber-300 font-medium text-lg">Vedi tutte le bolle <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="teaser-card bg-stone-800 rounded-3xl overflow-hidden shadow-xl">
+                    <img src="images/raccolta-olive.jpeg" alt="Raccolta olive" class="teaser-img w-full" loading="lazy">
+                    <div class="p-8 lg:p-10">
+                        <h3 class="heading-font text-3xl lg:text-4xl font-bold mb-4">Esperienze</h3>
+                        <p class="text-stone-300 text-base lg:text-lg mb-6">Raccolta olive, passeggiate al tramonto, cene in bolla e momenti autentici abruzzesi.</p>
+                        <a href="esperienze.html" class="inline-flex items-center gap-3 text-amber-400 hover:text-amber-300 font-medium text-lg">Scopri le esperienze <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Galleria e Contatti come prima... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- NUOVA SEZIONE: IL TERRITORIO -->
+    <section class="py-20 lg:py-32 bg-gradient-to-b from-stone-900 to-stone-950">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+            <h2 class="heading-font text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-12">Il Territorio</h2>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-lg lg:text-xl text-stone-300">
+                    <p>Sant'Eusanio del Sangro si trova in una posizione privilegiata: tra le dolci colline della Valle del Sangro e le pendici della <strong>Maiella</strong> innevata, a soli 20-30 minuti dalla splendida <strong>Costa dei Trabocchi</strong> con i suoi antichi trabocchi sul mare Adriatico.</p>
+                    <p>Intorno a noi troverai:</p>
+                    <ul class="list-disc pl-6 space-y-3">
+                        <li>L'<strong>Oasi WWF Riserva Naturale di Serranella</strong> – paradiso per birdwatching e passeggiate nella natura</li>
+                        <li>Borghi medievali come <strong>Casoli</strong>, <strong>Roccascalegna</strong> con il suo castello fiabesco, <strong>Guardiagrele</strong> e <strong>Lanciano</strong></li>
+                        <li>La vicinanza al Parco Nazionale della Maiella per escursioni, trekking e ciaspolate invernali</li>
+                        <li>La Costa dei Trabocchi con spiagge selvagge, calette segrete e ristoranti su palafitte</li>
+                    </ul>
+                    <p>Una terra di contrasti perfetti: montagna, collina, mare e tradizioni millenarie, tutto raggiungibile in breve tempo dal tuo rifugio Bubblebee.</p>
+                </div>
+                <img src="images/vista-tenuta.jpeg" alt="Panorama Maiella da Sant'Eusanio del Sangro" class="rounded-3xl shadow-2xl order-first lg:order-last" loading="lazy">
+            </div>
+            <div class="text-center mt-12">
+                <a href="contatti.html" class="inline-flex items-center gap-4 text-amber-400 hover:text-amber-300 text-xl font-medium">
+                    Pianifica il tuo itinerario <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUOVA SEZIONE: BOTTEGA -->
+    <section class="py-20 lg:py-32 bg-stone-900">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+            <h2 class="heading-font text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-12">La Bottega</h2>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <img src="images/raccolta-olive.jpeg" alt="Prodotti della bottega: olio, conserve, formaggi" class="rounded-3xl shadow-2xl" loading="lazy">
+                <div class="space-y-6 text-lg lg:text-xl text-stone-300">
+                    <p>Nella nostra bottega trovi il meglio della produzione propria e del territorio abruzzese, selezionato con cura per farti portare a casa un pezzo autentico di questa terra.</p>
+                    <ul class="list-disc pl-6 space-y-3">
+                        <li><strong>Olio EVO extra vergine</strong> monovarietale dalle nostre olive raccolte a mano</li>
+                        <li>Formaggi pecorini e caprini locali, stagionati e freschi</li>
+                        <li>Conserve artigianali, marmellate, miele millefiori e creme di tartufo</li>
+                        <li>Salumi tipici abruzzesi, vini del territorio e liquori artigianali</li>
+                        <li>Prodotti bio e a km zero: pasta all'uovo, legumi, farine di grani antichi</li>
+                    </ul>
+                    <p>Perfetti come souvenir o per continuare l'esperienza Bubblebee anche a casa tua. Disponibili per l'acquisto diretto durante il soggiorno o su prenotazione.</p>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="contatti.html" class="inline-flex items-center gap-4 text-amber-400 hover:text-amber-300 text-xl font-medium">
+                    Scopri i prodotti disponibili <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (invariato) -->
+    <footer class="bg-black py-16 border-t border-amber-900">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12 text-center md:text-left">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center gap-4">
+                    <img src="images/logo1.JPG" class="h-10" alt="Logo">
+                    <div class="text-sm leading-none">
+                        <span class="heading-font text-3xl">Bubblebee</span><br>
+                        <span class="text-amber-400">LUXURY B&amp;B</span>
+                    </div>
+                </div>
+                <div class="text-stone-500 text-sm">
+                    Via Castellata 6 • 66037 Sant'Eusanio del Sangro (CH)<br>
+                    P.IVA 02853900690 • © 2026 Bubblebee Luxury B&amp;B
+                </div>
+                <div class="flex gap-8 text-2xl">
+                    <a href="#" class="hover:text-amber-400"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-amber-400"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            btn.innerHTML = menu.classList.contains('hidden') 
+                ? '<i class="fas fa-bars"></i>' 
+                : '<i class="fas fa-times"></i>';
+        });
+    </script>
+</body>
+</html>
