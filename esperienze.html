@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Esperienze • Bubblebee Luxury B&B</title>
+  <meta name="description" content="Esperienze wellness (yoga al tramonto, massaggi) e attività legate al territorio (raccolta olive, presepe vivente di Sant'Eusanio del Sangro)."/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --gold: #d4af37;
+      --gold-dark: #b8962e;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: var(--gold);
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+    .experience-card {
+      transition: all 0.4s ease;
+      background: rgba(30,30,30,0.7);
+      backdrop-filter: blur(8px);
+    }
+    .experience-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 25px 50px -12px rgba(212, 175, 55, 0.25);
+    }
+  </style>
+</head>
+<body class="bg-stone-950 text-stone-100">
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-stone-950/90 backdrop-blur-md border-b border-amber-900/50">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-12 py-5 flex justify-between items-center">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="images/logo1.JPG" alt="Bubblebee Logo" class="h-12 lg:h-14 w-auto">
+        <div>
+          <div class="text-3xl lg:text-4xl font-bold tracking-tight heading-font text-white">Bubblebee</div>
+          <div class="text-xs lg:text-sm text-amber-400 tracking-widest -mt-1">LUXURY B&amp;B</div>
+        </div>
+      </a>
+
+      <div class="hidden lg:flex items-center gap-10 text-base font-medium">
+        <a href="index.html"        class="nav-link">Home</a>
+        <a href="tenuta.html"       class="nav-link">La Tenuta</a>
+        <a href="stanze.html"       class="nav-link">Le Bolle</a>
+        <a href="esperienze.html"   class="nav-link active">Esperienze</a>
+        <a href="territorio.html"   class="nav-link">Il Territorio</a>
+        <a href="bottega.html"      class="nav-link">La Bottega</a>
+        <a href="galleria.html"     class="nav-link">Galleria</a>
+        <a href="contatti.html"     class="nav-link">Contatti</a>
+      </div>
+
+      <a href="contatti.html" class="hidden lg:inline-flex items-center gap-3 bg-amber-600 hover:bg-amber-500 text-white font-semibold px-8 py-4 rounded-full transition-colors">
+        <i class="far fa-calendar-alt"></i> Prenota ora
+      </a>
+
+      <button id="mobile-menu-btn" class="lg:hidden text-3xl text-amber-400">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-stone-950 border-t border-amber-900/50">
+      <div class="px-6 py-8 flex flex-col gap-6 text-center text-lg">
+        <a href="index.html">Home</a>
+        <a href="tenuta.html">La Tenuta</a>
+        <a href="stanze.html">Le Bolle</a>
+        <a href="esperienze.html" class="text-amber-400 font-medium">Esperienze</a>
+        <a href="territorio.html">Il Territorio</a>
+        <a href="bottega.html">La Bottega</a>
+        <a href="galleria.html">Galleria</a>
+        <a href="contatti.html">Contatti</a>
+        <a href="contatti.html" class="mt-4 inline-block bg-amber-600 text-white px-10 py-4 rounded-full font-semibold">Prenota ora</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="pt-32 pb-20 lg:pt-40 lg:pb-32 bg-gradient-to-b from-stone-950 via-stone-900 to-stone-950 text-center">
+    <div class="max-w-5xl mx-auto px-6">
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold heading-font leading-tight mb-6">
+        Esperienze
+      </h1>
+      <p class="text-xl sm:text-2xl lg:text-3xl text-amber-200/90 max-w-4xl mx-auto">
+        Dal profondo relax del corpo e della mente,<br class="hidden sm:block">
+        alle attività autentiche legate alla natura e alle tradizioni abruzzesi.
+      </p>
+    </div>
+  </section>
+
+  <!-- WELLNESS -->
+  <section class="py-16 lg:py-24 bg-stone-900">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+      <h2 class="text-4xl lg:text-5xl heading-font font-bold text-center mb-16 text-amber-200">
+        Wellness & Relax
+      </h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-14">
+
+        <!-- Yoga al tramonto -->
+        <div class="experience-card rounded-3xl overflow-hidden border border-amber-900/30">
+          <img src="images/yoga-tramonto.jpg" alt="Yoga al tramonto nei campi di grano" class="w-full h-64 object-cover">
+          <div class="p-8 lg:p-10">
+            <h3 class="text-3xl font-bold heading-font mb-4">Yoga al tramonto</h3>
+            <p class="text-stone-300 mb-6">
+              Sessione di yoga dolce o vinyasa flow immersi nei campi di grano, con il sole che tramonta dietro la Maiella. 
+              Respiro, movimento e connessione con la natura.
+            </p>
+            <div class="text-sm text-amber-400/80">Su prenotazione • Durata 60–75 min</div>
+          </div>
+        </div>
+
+        <!-- Massaggi -->
+        <div class="experience-card rounded-3xl overflow-hidden border border-amber-900/30">
+          <img src="images/massaggio-bolla.jpg" alt="Massaggio rilassante in bolla" class="w-full h-64 object-cover">
+          <div class="p-8 lg:p-10">
+            <h3 class="text-3xl font-bold heading-font mb-4">Massaggi & Trattamenti</h3>
+            <p class="text-stone-300 mb-6">
+              Massaggi rilassanti, decontratturanti o con oli essenziali locali, direttamente nella tua bolla o in area dedicata.
+              Opzioni: hot stone, ayurvedico, drenante.
+            </p>
+            <div class="text-sm text-amber-400/80">Su prenotazione • 50–90 min</div>
+          </div>
+        </div>
+
+        <!-- Altri wellness (es. meditazione guidata) -->
+        <div class="experience-card rounded-3xl overflow-hidden border border-amber-900/30">
+          <img src="images/meditazione-natura.jpg" alt="Meditazione guidata all'aperto" class="w-full h-64 object-cover">
+          <div class="p-8 lg:p-10">
+            <h3 class="text-3xl font-bold heading-font mb-4">Meditazione & Sound Healing</h3>
+            <p class="text-stone-300 mb-6">
+              Sessioni guidate di meditazione mindfulness o con campane tibetane e gong, al mattino o al calar del sole, per rigenerare mente e spirito.
+            </p>
+            <div class="text-sm text-amber-400/80">Su prenotazione • 45–60 min</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ESPERIENZE TERRITORIO -->
+  <section class="py-16 lg:py-24 bg-stone-950">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+      <h2 class="text-4xl lg:text-5xl heading-font font-bold text-center mb-16 text-amber-200">
+        Natura & Tradizioni
+      </h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-14">
+
+        <!-- Raccolta olive -->
+        <div class="experience-card rounded-3xl overflow-hidden border border-amber-900/30">
+          <img src="images/raccolta-olive.jpeg" alt="Raccolta olive a mano" class="w-full h-64 object-cover">
+          <div class="p-8 lg:p-10">
+            <h3 class="text-3xl font-bold heading-font mb-4">Raccolta delle olive</h3>
+            <p class="text-stone-300 mb-6">
+              Partecipa alla raccolta manuale delle olive della tenuta (periodo ottobre–novembre). 
+              Segue degustazione dell'olio nuovo e spiegazione del processo di molitura.
+            </p>
+            <div class="text-sm text-amber-400/80">Stagionale • Su prenotazione</div>
+          </div>
+        </div>
+
+        <!-- Presepe vivente -->
+        <div class="experience-card rounded-3xl overflow-hidden border border-amber-900/30">
+          <img src="images/presepe-vivente-sant-eusanio.jpg" alt="Presepe vivente di Sant'Eusanio del Sangro" class="w-full h-64 object-cover">
+          <div class="p-8 lg:p-10">
+            <h3 class="text-3xl font-bold heading-font mb-4">Presepe Vivente di Sant'Eusanio</h3>
+            <p class="text-stone-300 mb-6">
+              Uno dei presepi viventi più suggestivi d'Abruzzo, con centinaia di figuranti nei vicoli del borgo (periodo natalizio). 
+              Trasferimento e visita guidata inclusi.
+            </p>
+            <div class="text-sm text-amber-400/80">Dicembre–Gennaio • Su prenotazione</div>
+          </div>
+        </div>
+
+        <!-- Passeggiate natura -->
+        <div class="experience-card rounded-3xl overflow-hidden border border-amber-900/30">
+          <img src="images/passeggiata-campagna.jpg" alt="Passeggiata nei campi al tramonto" class="w-full h-64 object-cover">
+          <div class="p-8 lg:p-10">
+            <h3 class="text-3xl font-bold heading-font mb-4">Passeggiate naturalistiche</h3>
+            <p class="text-stone-300 mb-6">
+              Escursioni guidate tra i campi di grano, uliveti e sentieri verso l’Oasi WWF Serranella o le prime pendici della Maiella. 
+              Possibilità di birdwatching e picnic.
+            </p>
+            <div class="text-sm text-amber-400/80">Tutto l'anno • Su prenotazione</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINALE -->
+  <section class="py-20 lg:py-32 bg-gradient-to-b from-stone-900 to-black text-center">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-4xl lg:text-5xl heading-font font-bold mb-6">
+        Quale esperienza vuoi vivere con noi?
+      </h2>
+      <p class="text-xl lg:text-2xl text-amber-200/80 mb-10">
+        Contattaci per personalizzare il tuo soggiorno.
+      </p>
+      <a href="contatti.html" class="inline-flex items-center gap-4 px-12 py-6 bg-amber-600 hover:bg-amber-500 text-white text-xl lg:text-2xl font-semibold rounded-full transition-colors shadow-lg shadow-amber-900/30">
+        <i class="far fa-calendar-alt text-2xl"></i> Richiedi programma
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black py-16 border-t border-amber-900/30">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-12 text-center md:text-left">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-10">
+        <div class="flex items-center gap-4">
+          <img src="images/logo1.JPG" alt="Logo" class="h-10">
+          <div class="text-sm leading-none">
+            <div class="heading-font text-3xl">Bubblebee</div>
+            <div class="text-amber-400">LUXURY B&amp;B</div>
+          </div>
+        </div>
+
+        <div class="text-stone-500 text-sm">
+          Via Castellata 6 • 66037 Sant'Eusanio del Sangro (CH)<br>
+          P.IVA 02853900690 • © 2026 Bubblebee Luxury B&amp;B
+        </div>
+
+        <div class="flex gap-8 text-3xl">
+          <a href="#" class="hover:text-amber-400 transition-colors"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="hover:text-amber-400 transition-colors"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
