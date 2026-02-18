@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La Bottega di Bubblebee: olio EVO nostro, formaggi, salumi, miele e conserve abruzzesi.">
+    <title>La Bottega • Bubblebee Luxury B&B</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap');
+        :root { --gold: #d4af37; }
+        .heading-font { font-family: 'Playfair Display', sans-serif; }
+        .nav-link:after { content:''; position:absolute; width:0; height:2px; bottom:-2px; left:0; background-color:var(--gold); transition:width .3s; }
+        .nav-link:hover:after, .active:after { width:100%; }
+        .active { color: #fcd34d !important; }
+    </style>
+</head>
+<body class="bg-stone-950 text-stone-200 font-sans">
+
+    <!-- NAVBAR (stessa di sopra, con active su Bottega) -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-stone-950/95 backdrop-blur-md border-b border-amber-900">
+        <!-- copia identica della navbar di territorio.html ma cambia active in bottega.html -->
+        <!-- (per brevità la riporto identica, cambia solo la riga active) -->
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12 py-5 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="images/logo1.JPG" alt="Logo" class="h-11 lg:h-14 w-auto">
+                <div>
+                    <span class="heading-font text-3xl lg:text-4xl font-bold tracking-tighter">Bubblebee</span>
+                    <p class="text-xs lg:text-sm text-amber-400 -mt-1 tracking-[3px]">LUXURY B&amp;B</p>
+                </div>
+            </a>
+
+            <div class="hidden lg:flex items-center gap-8 text-base font-medium">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="tenuta.html" class="nav-link">La Tenuta</a>
+                <a href="stanze.html" class="nav-link">Le Bolle</a>
+                <a href="esperienze.html" class="nav-link">Esperienze</a>
+                <a href="territorio.html" class="nav-link">Il Territorio</a>
+                <a href="bottega.html" class="nav-link active">La Bottega</a>
+                <a href="galleria.html" class="nav-link">Galleria</a>
+                <a href="contatti.html" class="nav-link">Contatti</a>
+            </div>
+
+            <a href="contatti.html" class="hidden lg:flex items-center gap-3 bg-amber-500 hover:bg-amber-400 text-stone-950 font-semibold px-8 py-4 rounded-full transition-all text-sm">
+                <i class="fas fa-calendar"></i> PRENOTA ORA
+            </a>
+
+            <button id="mobile-btn" class="lg:hidden text-3xl text-amber-300"><i class="fas fa-bars"></i></button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-stone-950 border-t border-amber-900">
+            <div class="px-6 py-8 flex flex-col items-center gap-6 text-lg">
+                <a href="index.html">Home</a>
+                <a href="tenuta.html">La Tenuta</a>
+                <a href="stanze.html">Le Bolle</a>
+                <a href="esperienze.html">Esperienze</a>
+                <a href="territorio.html">Il Territorio</a>
+                <a href="bottega.html">La Bottega</a>
+                <a href="galleria.html">Galleria</a>
+                <a href="contatti.html">Contatti</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="pt-28 pb-16 bg-stone-950">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+            <img src="images/raccolta-olive.jpeg" alt="La Bottega" class="w-full h-[70vh] object-cover rounded-3xl">
+            <div class="text-center -mt-20 relative z-10">
+                <h1 class="heading-font text-6xl md:text-7xl lg:text-8xl font-bold text-white">La Bottega</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="py-20 lg:py-28 bg-stone-900">
+        <div class="max-w-3xl mx-auto text-center px-6">
+            <p class="text-xl lg:text-2xl text-stone-300">Nella nostra bottega trovi solo prodotti della tenuta e del territorio: olio extravergine di nostra produzione, formaggi, salumi, miele e conserve artigianali. Tutto a km zero e fatto con amore.</p>
+        </div>
+    </section>
+
+    <!-- PRODOTTI -->
+    <section class="py-20 bg-stone-950">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <div class="text-center">
+                    <img src="https://picsum.photos/id/292/600/400" alt="Olio EVO" class="rounded-3xl mb-6">
+                    <h3 class="text-2xl font-bold">Olio EVO Monovarietale</h3>
+                    <p class="text-amber-400">Dalle nostre olive, spremuto a freddo. Bottiglie da 0,5 L e 0,75 L.</p>
+                </div>
+
+                <div class="text-center">
+                    <img src="https://picsum.photos/id/201/600/400" alt="Formaggi" class="rounded-3xl mb-6">
+                    <h3 class="text-2xl font-bold">Formaggi Pecorini e Caprini</h3>
+                    <p class="text-amber-400">Freschi e stagionati, dal caseificio locale.</p>
+                </div>
+
+                <div class="text-center">
+                    <img src="https://picsum.photos/id/251/600/400" alt="Salumi" class="rounded-3xl mb-6">
+                    <h3 class="text-2xl font-bold">Salumi Tipici Abruzzesi</h3>
+                    <p class="text-amber-400">Salsiccia, ventricina, prosciutto e lonza.</p>
+                </div>
+
+                <div class="text-center">
+                    <img src="https://picsum.photos/id/133/600/400" alt="Miele" class="rounded-3xl mb-6">
+                    <h3 class="text-2xl font-bold">Miele Millefiori e Castagno</h3>
+                    <p class="text-amber-400">Dal nostro apicoltore di fiducia.</p>
+                </div>
+
+                <div class="text-center">
+                    <img src="https://picsum.photos/id/292/600/400" alt="Conserve" class="rounded-3xl mb-6">
+                    <h3 class="text-2xl font-bold">Conserve e Marmellate</h3>
+                    <p class="text-amber-400">Peperoni, melanzane, pomodori secchi e confetture di frutta.</p>
+                </div>
+
+                <div class="text-center">
+                    <img src="https://picsum.photos/id/201/600/400" alt="Vini" class="rounded-3xl mb-6">
+                    <h3 class="text-2xl font-bold">Vini del Territorio</h3>
+                    <p class="text-amber-400">Montepulciano d’Abruzzo e Trebbiano.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-b from-stone-950 to-black text-center">
+        <div class="max-w-xl mx-auto px-6">
+            <h2 class="heading-font text-5xl font-bold mb-6">Porta a casa un pezzo di Abruzzo</h2>
+            <a href="contatti.html" class="inline-block px-12 py-6 bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-xl rounded-full transition-all">Richiedi i prodotti durante il soggiorno</a>
+        </div>
+    </section>
+
+    <!-- FOOTER (stesso) -->
+    <footer class="bg-black py-16 border-t border-amber-900">
+        <!-- stesso footer delle altre pagine -->
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12 text-center md:text-left">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center gap-4">
+                    <img src="images/logo1.JPG" class="h-10" alt="Logo">
+                    <div class="text-sm leading-none">
+                        <span class="heading-font text-3xl">Bubblebee</span><br>
+                        <span class="text-amber-400">LUXURY B&amp;B</span>
+                    </div>
+                </div>
+                <div class="text-stone-500 text-sm">
+                    Via Castellata 6 • 66037 Sant'Eusanio del Sangro (CH)<br>
+                    P.IVA 02853900690 • © 2026 Bubblebee Luxury B&amp;B
+                </div>
+                <div class="flex gap-8 text-2xl">
+                    <a href="#" class="hover:text-amber-400"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-amber-400"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // stesso script mobile
+        const btn = document.getElementById('mobile-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            btn.innerHTML = menu.classList.contains('hidden') ? '<i class="fas fa-bars"></i>' : '<i class="fas fa-times"></i>';
+        });
+    </script>
+</body>
+</html>
